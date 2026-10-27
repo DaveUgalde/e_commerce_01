@@ -1,33 +1,19 @@
-# Dependencias
+# modulos de npm
+# variables de entorno
+# logs
+# configuraciones
+# distribucion
+
 node_modules/
-*/node_modules
-
-# Variables de entorno
+dist/
 .env
-.env.local
-.env.*.local
+.env.*
 !.env.example
-
-# Builds
-client/dist/
-client/build/
-server/dist/
-
-# Logs
-*.logs
-npm-debug.log*
 logs/
-
-# Sistema operativo
-.DS_STORE
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-*.swp
-
-# Coverage
+*.log
 coverage/
-
-steps_by_steps/
+uploads/
+*.map
+.DS_Store
+.vs_code/
+.idea/

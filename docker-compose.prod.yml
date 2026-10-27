@@ -1,0 +1,15 @@
+# TODO: Consultar comandos y parametros especificos para prod, porque y como se escojen
+services:
+  mongo:
+    image: mongo-7
+    # Requiere autentication
+    command: ["--replSet", "rs0", "--bind_ip_all", "--auth"]
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    volumes: ["mongo-prod-data:/data/db"]
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--requirepass", "${REDIS_PASSWORD}"]
+volumes:
+  mongo-prod-data:
